@@ -34,6 +34,7 @@ public class UserService {
                     .withParameter("possuiCnh", "<>", false)
                     .withParameter("dataNascimento", ">=", de)
                     .withParameter("dataNascimento", "<=", ate)
+                    .withSort("asc", "dataNascimento")
                 .toPage();
     }
 
@@ -44,6 +45,7 @@ public class UserService {
                      .withParameter("status", "=", status)
                      .withParameter("dataNascimento", ">=", de)
                      .withParameter("dataNascimento", "<=", ate)
+                     .withSort("asc", "dataNascimento")
                  .toList();
      }
 
